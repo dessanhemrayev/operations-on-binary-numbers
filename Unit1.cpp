@@ -387,7 +387,7 @@ void __fastcall TForm1::Button1Click(TObject *Sender)
 	{
 	if (i==0)
 	{
-			Label63->Caption+= " "+IntToStr(c1[i]);
+		Label63->Caption+= " "+IntToStr(c1[i]);
 		Label63->Caption+= " . ";
 		Label64->Caption+= " "+IntToStr(c1[i]);
 		Label64->Caption+= " . ";
@@ -407,8 +407,7 @@ void __fastcall TForm1::Button1Click(TObject *Sender)
 	{
 	if (i==0)
 	{
-
-		Label63->Caption+= " "+IntToStr(c1[i]);
+        Label63->Caption+= " "+IntToStr(c1[i]);
 		Label63->Caption+= " . ";
 	}
 	else{

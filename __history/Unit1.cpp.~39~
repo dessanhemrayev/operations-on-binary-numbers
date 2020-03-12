@@ -112,6 +112,8 @@ void __fastcall TForm1::Button1Click(TObject *Sender)
    int b=StrToInt(Edit2->Text);
    int k=0;
 
+   int q1=a;
+   int q2=b;
    if (RadioButton1->Checked)
    {
    int a1[17] = { 0 };
@@ -259,7 +261,12 @@ void __fastcall TForm1::Button1Click(TObject *Sender)
 			c1[i] = sum % 2;
 			pr = sum / 2;
 		}
-        	Label19->Caption= "A>0 B>0";
+
+			if ((q1>0)&&(q2>0)) {
+						Label19->Caption= "A>0 B>0";
+			}else if ((q1<0)&&(q2<0))   {	Label19->Caption= "A<0 B<0";}
+
+
     	Label20->Caption= "Сложение" ;
 			  for (size_t i = 0; i < 17; i++)
 			{
@@ -309,7 +316,7 @@ void __fastcall TForm1::Button1Click(TObject *Sender)
         b1[0] = 1;
         b *= -1;
 	  }
-    TenToTwo(a, a1);
+	TenToTwo(a, a1);
 	TenToTwo(b, b1);
 
 	 Label33->Caption+=IntToStr(a1[0]);
@@ -376,26 +383,27 @@ void __fastcall TForm1::Button1Click(TObject *Sender)
 
     if (c1[0] == 0)
 	{
-        for (size_t i = 0; i < 17; i++)
+		for (size_t i = 0; i < 17; i++)
 	{
 	if (i==0)
 	{
-
+			Label63->Caption+= " "+IntToStr(c1[i]);
+		Label63->Caption+= " . ";
 		Label64->Caption+= " "+IntToStr(c1[i]);
 		Label64->Caption+= " . ";
 	}
 	else{
 		 Label64->Caption+= IntToStr(c1[i]);
-
+		  Label63->Caption+= IntToStr(c1[i]);
 	}
 
 	}
 
-       Label42->Caption+= IntToStr(twoToten(c1));
-    }
-    else
-	{      obr(c1);
-          for (size_t i = 0; i < 17; i++)
+	   Label42->Caption+= IntToStr(twoToten(c1));
+	}
+	else
+	{
+    	  for (size_t i = 0; i < 17; i++)
 	{
 	if (i==0)
 	{
@@ -410,36 +418,180 @@ void __fastcall TForm1::Button1Click(TObject *Sender)
 
 	}
 
+	obr(c1);
+
+
+		  for (size_t i = 0; i < 17; i++)
+	{
+	if (i==0)
+	{
+
+		Label64->Caption+= " "+IntToStr(c1[i]);
+		Label64->Caption+= " . ";
+	}
+	else{
+		 Label64->Caption+= IntToStr(c1[i]);
+	}
+	}
+
 	   Label42->Caption+= IntToStr(twoToten(c1));
-
-
-
-
-
-	   /* print_d(a2, b2, c1);
-		cout << endl;
-		cout << "C(10)=" << twoToten(c1) << endl;;   */
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
 
    ///конец
    }
    else if (RadioButton3->Checked)
    {
-	  k=3;
+		///начало
+	 int a1[17] = { 0 };
+    int b1[17] = { 0 };
+    int a2[17] = { 0 };
+    int b2[17] = { 0 };
+    int c1[17] = { 0 };
+    int d[17] = { 0 };
+    d[16] = 1;
+    int k, l = 0;
+    k = a;
+    l = b;
+    if (a < 0)
+    {
+        a1[0] = 1;
+        a *= -1;
+
+	}
+    if (b < 0)
+    {
+        b1[0] = 1;
+		b *= -1;
+
+	}
+
+	TenToTwo(a, a1);
+	TenToTwo(b, b1);
+	 Label13->Caption+=IntToStr(a1[0]);
+	 Label14->Caption+=IntToStr(b1[0]);
+     for (size_t i = 0; i < 17; i++)
+	{
+	if (i==0)
+	{
+		 Label9->Caption+=" "+IntToStr(a1[i]);
+		 Label9->Caption+= " . ";
+		 Label10->Caption+= " "+IntToStr(b1[i]);
+		  Label10->Caption+= " . ";
+	}
+	else{
+		 Label9->Caption+= IntToStr(a1[i]);
+		 Label10->Caption+= IntToStr(b1[i]);
+	}
+
+	}
+
+
+
+	for (size_t i = 0; i < 17; i++)
+    {
+        a2[i] = a1[i];
+        b2[i] = b1[i];
+    }
+    if (a1[0] == 1)
+    {
+        obr(a1);
+        pk_dk(a1, a1);
+    }
+    if (b1[0] == 1)
+    {
+        obr(b1);
+        pk_dk(b1, b1);
+	}
+
+
+	for (size_t i = 0; i < 17; i++)
+	{
+	if (i==0)
+	{
+		 Label47->Caption+=" "+IntToStr(a1[i]);
+		 Label47->Caption+= " . ";
+		 Label48->Caption+= " "+IntToStr(b1[i]);
+		  Label48->Caption+= " . ";
+		  Label53->Caption+=" "+IntToStr(a1[i]);
+		 Label53->Caption+= " . ";
+		 Label54->Caption+= " "+IntToStr(b1[i]);
+		 Label54->Caption+= " . ";
+	}
+	else{
+		 Label47->Caption+= IntToStr(a1[i]);
+		 Label48->Caption+= IntToStr(b1[i]);
+		 Label53->Caption+= IntToStr(a1[i]);
+		 Label54->Caption+= IntToStr(b1[i]);
+	}
+
+	}
+    int sum = 0;
+    int pr = 0;
+    summa_bits(a1, b1, c1);
+	//print_doub(a1, b1);
+
+
+
+    if (c1[0] == 0)
+	{
+    for (size_t i = 0; i < 17; i++)
+		{
+		if (i==0)
+		{
+		Label55->Caption+= " "+IntToStr(c1[i]);
+		Label55->Caption+= " . ";
+		Label56->Caption+= " "+IntToStr(c1[i]);
+		Label56->Caption+= " . ";
+		}
+         else{
+		 Label55->Caption+= IntToStr(c1[i]);
+		  Label56->Caption+= IntToStr(c1[i]);
+	}
+
+	}
+
+	   Label44->Caption+= IntToStr(twoToten(c1));
+		//print_d(a2, b2, c1);
+    }
+    else
+	{
+	for (size_t i = 0; i < 17; i++)
+		{
+		if (i==0)
+		{
+
+		Label55->Caption+= " "+IntToStr(c1[i]);
+		Label55->Caption+= " . ";
+		}
+		 else
+		 {
+		  Label55->Caption+= IntToStr(c1[i]);
+		 }
+		}
+
+		obr(c1);
+        pk_dk(c1, c1);
+	   // print_d(a2, b2, c1);
+
+
+	   for (size_t i = 0; i < 17; i++)
+		{
+		if (i==0)
+		{
+
+		Label56->Caption+= " "+IntToStr(c1[i]);
+		Label56->Caption+= " . ";
+		}
+		 else{
+
+		  Label56->Caption+= IntToStr(c1[i]);
+			}
+		}
+	   Label44->Caption+= IntToStr(twoToten(c1));
+	}
+
+
+	///конец
    }
 
 
@@ -461,8 +613,13 @@ Edit2->Text="";
 RadioButton1->Checked=false;
 RadioButton2->Checked=false;
 RadioButton3->Checked=false;
-Label5->Caption="";
-Label6->Caption="";
+
+Label9->Caption="";
+Label10->Caption="";
+Label13->Caption="";
+Label14->Caption="";
+Label15->Caption="";
+Label16->Caption="";
 Label17->Caption="";
 Label18->Caption="";
 Label19->Caption= "";
@@ -479,11 +636,20 @@ Label34->Caption= "" ;
 
 Label37->Caption= "" ;
 Label38->Caption= "" ;
+Label42->Caption= "" ;
+Label44->Caption= "" ;
+Label47->Caption= "" ;
+Label48->Caption= "" ;
 
+Label53->Caption= "" ;
+Label54->Caption= "" ;
+Label55->Caption= "" ;
+Label56->Caption= "" ;
 
 Label61->Caption= "" ;
 Label62->Caption= "" ;
 Label63->Caption= "" ;
+Label64->Caption= "" ;
 
 }
 //---------------------------------------------------------------------------
