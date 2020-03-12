@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.884,=C:\Users\dessa\OneDrive\Документы\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.265,=C:\Users\dessa\OneDrive\Документы\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.897,=C:\Users\dessa\OneDrive\Документы\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.513,=C:\Users\dessa\OneDrive\Документы\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>2020.03.12 19:20:21.062,=C:\Users\dessa\OneDrive\Документы\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>2020.03.12 19:20:21.120,=C:\Users\dessa\OneDrive\Документы\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>2020.03.12 19:20:59.548,D:\projects\github\operations-on-binary-numbers\Unit1.h=C:\Users\dessa\OneDrive\Документы\Embarcadero\Studio\Projects\Unit1.h</Transaction>
+    <Transaction>2020.03.12 19:20:59.548,D:\projects\github\operations-on-binary-numbers\Unit1.dfm=C:\Users\dessa\OneDrive\Документы\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2020.03.12 19:20:59.548,D:\projects\github\operations-on-binary-numbers\Unit1.cpp=C:\Users\dessa\OneDrive\Документы\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>2020.03.12 19:21:04.678,D:\projects\github\operations-on-binary-numbers\Project1PCH1.h=C:\Users\dessa\OneDrive\Документы\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>2020.03.12 19:21:05.973,D:\projects\github\operations-on-binary-numbers\Project1.cbproj=C:\Users\dessa\OneDrive\Документы\Embarcadero\Studio\Projects\Project1.cbproj</Transaction>
+    <Transaction>2020.03.12 19:21:24.996,D:\projects\github\operations-on-binary-numbers\OperationsPCH1.h=D:\projects\github\operations-on-binary-numbers\Project1PCH1.h</Transaction>
+    <Transaction>2020.03.12 19:21:25.001,D:\projects\github\operations-on-binary-numbers\Operations.cbproj=D:\projects\github\operations-on-binary-numbers\Project1.cbproj</Transaction>
+  </Transactions>
+</BorlandProject>
